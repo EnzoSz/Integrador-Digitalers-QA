@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 930px)">
     <title>Integrador</title>
   </head>
   <body>
@@ -22,7 +23,6 @@
         <ul class="header__nav-list">
           <li><a href="#¿Que es SCRUM?">¿Que es?</a></li>
           <li><a href="#Roles">Roles</a></li>
-          <li><a href="#Beneficios">Beneficios</a></li>
           <li><a href="#Ceremonias">Ceremonias</a></li>
           <li><a href="#Artefactos">Artefactos</a></li>
         </ul>
@@ -52,68 +52,137 @@
           </p>
         </section>
       </section>
-      <section id="Roles">
-        <div>
+      <section id="Roles" class="main__rol">
+        <div class="main__rol-tittle">
           <h2>Roles</h2>
         </div>
-        <section>
-          <article>
+        <section class="main__rol-cards">
+          <article class="main__rol-card">
             <span></span>
-            <p>Product Owner</p>
+            <h3>Product Owner</h3>
+            <p>
+              Esta encargado de optimizar y maximizar el valor del producto,
+              tambien se encarga de gestionar el Product Backlog. Es fundamental
+              que el PO(Product Owner) tenga los privilegios y los permisos
+              necesarios para tomar cualquier decisión respecto al producto.
+            </p>
           </article>
-          <article>
+          <article class="main__rol-card">
             <span></span>
-            <p>Bussines Analys</p>
+            <h3>Bussines Analys</h3>
+            <p>
+              Es la persona encargada de entender el modelo de negocio, el plan
+              estratégico y de operaciones de la organización y traducirlo en
+              requerimientos técnicos y funcionales concretos.
+            </p>
           </article>
-          <article>
+          <article class="main__rol-card">
             <span></span>
-            <p>Srum Master</p>
+            <h3>Srum Master</h3>
+            <p>
+              El Scrum Master es un facilitador y líder de equipo en la
+              metodología ágil Scrum. Su función principal es garantizar que el
+              equipo Scrum siga las prácticas y valores de Scrum, ayudando a
+              eliminar obstáculos y promoviendo un ambiente de colaboración y
+              mejora continua. El Scrum Master capacita al equipo en las
+              metodologías y asegura que las ceremonias (reuniones) como la
+              Daily Standup, la Sprint Planning, la Sprint Review y la
+              Retrospectiva se realicen de manera efectiva. Además, trabaja para
+              mejorar la comunicación entre los miembros del equipo, el Product
+              Owner y las partes interesadas, contribuyendo al éxito del
+              proyecto al fomentar la autogestión y la entrega de valor
+              constante.
+            </p>
           </article>
-          <article>
+          <article class="main__rol-card">
             <span></span>
-            <p>Equipo Técnico</p>
+            <h3>Equipo Técnico</h3>
+            <p class="content">
+              El equipo tecnico esta formado por integrantes especializados los
+              cuales son:
+            </p>
+            <input type="checkbox" id="toggle-1" class="toggle-button">
+            <ul class="full-content">
+              <li>
+                <h4>Technical Leader</h4>
+                <p>
+                  Es quien esta a cargo del equipo de desarrollo y el encargado
+                  de que el producto cumpla con la calidad técnica requerida
+                </p>
+              </li>
+              <li>
+                <h4>Desarrollador Fron-end</h4>
+                <p>
+                  Un desarrollador Front-End se enfoca en crear la parte visual
+                  y la interacción de un sitio web o aplicación, utilizando
+                  tecnologías como HTML, CSS y JavaScript. Su objetivo es
+                  garantizar una experiencia de usuario atractiva y funcional al
+                  trabajar en la interfaz que los usuarios ven y con la que
+                  interactúan directamente.
+                </p>
+              </li>
+              <li>
+                <h4>Desarrollador Back-end</h4>
+                <p>
+                  Un desarrollador Back-End se encarga de la lógica y
+                  funcionalidad detrás de escena de un sitio web o aplicación,
+                  gestionando la base de datos, la autenticación, el
+                  almacenamiento de datos y otros aspectos técnicos. Trabaja con
+                  tecnologías y lenguajes de programación como PHP, Python,
+                  Java, Node.js, entre otros, para asegurarse de que todo
+                  funcione correctamente y de manera eficiente, brindando datos
+                  y servicios necesarios para que el Front-End pueda operar sin
+                  problemas.
+                </p>
+              </li>
+              <li>
+                <h4>Administrador de Bases de datos</h4>
+                <p>
+                  Un Administrador de Bases de Datos (DBA, por sus siglas en
+                  inglés) es responsable de gestionar y mantener la integridad,
+                  seguridad y eficiencia de las bases de datos de una
+                  organización. Su labor incluye el diseño, configuración,
+                  optimización y monitorización de bases de datos, así como la
+                  implementación de medidas de seguridad y la solución de
+                  problemas. Los DBAs trabajan con sistemas de gestión de bases
+                  de datos (DBMS) como MySQL, PostgreSQL, Oracle, SQL Server,
+                  entre otros, para garantizar un almacenamiento y acceso
+                  eficiente a la información que sostiene las aplicaciones y
+                  servicios de una empresa.
+                </p>
+              </li>
+              <li>
+                <h4>Tester QA Manual</h4>
+                <p>
+                  Un Tester QA manual es un profesional que se encarga de probar
+                  exhaustivamente aplicaciones, software o sistemas para
+                  identificar defectos, problemas de funcionamiento y asegurarse
+                  de que cumplan con los estándares de calidad. Utiliza casos de
+                  prueba diseñados meticulosamente para verificar y validar cada
+                  aspecto del producto, siguiendo pasos específicos y
+                  documentando los resultados. El Tester QA manual busca
+                  errores, identifica problemas de usabilidad y colabora con el
+                  equipo de desarrollo para garantizar que el software esté
+                  libre de fallas antes de su lanzamiento. Su enfoque manual y
+                  minucioso es esencial para asegurar la experiencia positiva
+                  del usuario y la estabilidad del producto final.
+                </p>
+              </li>
+              <li>
+                <h4>Seguridad Informatica</h4>
+                <p>Se encarga de buscar y solucionar cualquier vulnerabilidad de la página o aplicacion ante ataques maliciosos.</p>
+              </li>
+              
+            </ul>
+            <label for="toggle-1" class="read-more-label">Leer mas...</label>
           </article>
         </section>
       </section>
-      <section id="Beneficios">
-        <div>
-          <h2>Beneficios de la metodología SCRUM</h2>
-          <p>Los principales beneficios de Scrum son:</p>
-        </div>
-        <ul>
-          <li>
-            Permite afrontar mejor los proyectos en relación con el tiempo y
-            recursos a emplear.
-          </li>
-          <li>
-            Permite fijar una fecha de entrega más precisa y realista al
-            disponer de mayor control sobre todo el proceso.
-          </li>
-          <li>
-            Aporta mucho valor a la empresa gracias a la gran cantidad de
-            información que se obtiene (trabajo colaborativo).
-          </li>
-          <li>
-            Se reducen los tiempos de entrega y se incrementa la calidad del
-            producto o servicio ofrecido.
-          </li>
-          <li>
-            Se mejora la satisfacción del cliente, que pasa de un agente externo
-            estático, a participar en el proyecto.
-          </li>
-          <li>
-            Crea un mejor clima de trabajo donde se abordan los problemas e
-            incidencias desde una perspectiva positiva, buscando soluciones en
-            lugar de culpables.
-          </li>
-          <li>Aumenta la productividad y competitividad de la empresa.</li>
-        </ul>
-      </section>
-      <section id="Artefactos">
-        <div>
+      <section id="Artefactos" class="main__description">
+        <div class="main__description-title">
           <h2>Artefactos</h2>
           <article>
-            <p>Product backlog</p>
+            <h3>Product backlog</h3>
             <p>
               Es una lista de tareas que deben realizarse para el desarrollo del
               producto. Por lo general es mantenido y ordenado por el/los
@@ -123,7 +192,7 @@
             </p>
           </article>
           <article>
-            <p>Sprint backlog</p>
+            <h3>Sprint backlog</h3>
             <p>
               Es la lista de tareas pertenecientes al product backlog que seran
               tomadas en un sprint determinado.
@@ -131,13 +200,13 @@
           </article>
         </div>
       </section>
-      <section id="Ceremonias">
-        <div>
+      <section id="Ceremonias" class="main__ceremonias">
+        <div class="main__ceremonias--title">
           <h2>Ceremonias</h2>
         </div>
-        <section>
-          <article>
-            <p>Daily Meeting</p>
+        <section class="main__ceremonias--slider">
+          <article class="card__ceremonias">
+            <h4 class="card__ceremonias-title">Daily Meeting</h4>
             <div>
               <p>
                 Es una reunion en la que cada miembro del equipo da novedades
@@ -146,37 +215,37 @@
               </p>
             </div>
           </article>
-          <article>
-            <p>Sprint Plannign</p>
+          <article class="card__ceremonias">
+            <h6 class="card__ceremonias-title">Sprint Plannign</h6>
             <p>
               Es una reunion en la que el equipo coordina y planifica que tareas
               se van a tomar durante el siguiente sprint.
             </p>
           </article>
-          <article>
-            <p>Planificación Táctica</p>
+          <article class="card__ceremonias">
+            <h6 class="card__ceremonias-title">Planificación Táctica</h6>
             <p>
               Es una lista con las tareas que se deben hacer durante el sprint
               actual para ver en que tareas el equipo esta teniendo dificultades
               y tomar desiciones al respecto.
             </p>
           </article>
-          <article>
-            <p>Refinamiento</p>
+          <article class="card__ceremonias">
+            <h6 class="card__ceremonias-title">Refinamiento</h6>
             <p>
               Es una reorganizacion del product backlog, se hace en colaboracion
               con el equipo de desarrollo y el product owner.
             </p>
           </article>
-          <article>
-            <p>Sprint Review</p>
+          <article class="card__ceremonias">
+            <h6 class="card__ceremonias-title">Sprint Review</h6>
             <p>
               Es una reunion que se realiza al finalizar un sprint para evaluar
               los resultados del equipo.
             </p>
           </article>
-          <article>
-            <p>Retrospectiva</p>
+          <article class="card__ceremonias">
+            <h6 class="card__ceremonias-title">Retrospectiva</h6>
             <p>
               Es una reunion post review para analizar que salio bien y que
               podria mejorarse para el siguiente sprint.
@@ -185,8 +254,8 @@
         </section>
       </section>
     </main>
-    <footer>
-      <section>
+    <footer class="footer">
+      <section class="footer__redes">
         <div>
           <span></span>
           <a href="https://www.instagram.com/enzosoliz/">Instagram</a>

@@ -1,0 +1,11 @@
+
+.main__rol-cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 930px;
+    margin: 0 auto;
+}
+
+.main__ceremonias--slider {
+    justify-content: center;
+}
