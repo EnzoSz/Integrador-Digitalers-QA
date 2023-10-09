@@ -1,0 +1,56 @@
+CREATE schema if not exists bicicleteria;
+use bicicleteria;
+
+CREATE TABLE IF NOT EXISTS bicicleta (
+    codigo INT(11) NOT NULL PRIMARY KEY,
+    marca VARCHAR(50) NOT NULL,
+    modelo VARCHAR(50) NOT NULL,
+    color VARCHAR(50),
+    tipo_bicicleta INT(11) NOT NULL,
+    anio_fabricacion INT(11),
+    foreign key (tipo_bicicleta) references tipos_bicicletas(codigo)
+);
+CREATE TABLE if not exists tipos_bicicletas (
+    codigo INT PRIMARY KEY,
+    descripcion VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE clientes (
+    codigo INT PRIMARY KEY AUTO_INCREMENT,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellido VARCHAR(50) NOT NULL,
+    telefono VARCHAR(20),
+    DNI VARCHAR(20) NOT NULL,
+    Domicilio VARCHAR(100),
+    codigo_bicicleta INT DEFAULT 0,
+    FOREIGN KEY (codigo_bicicleta) REFERENCES bicicleta(codigo)
+);
+
+INSERT INTO tipos_bicicletas (codigo, descripcion) VALUES
+(1, 'Paseo'),
+(2, 'Montaña'),
+(3, 'Carrera');
+
+INSERT INTO bicicleta (codigo, marca, modelo, color, tipo_bicicleta, anio_fabricacion)
+VALUES
+(1, 'Marca1', 'Motomel', 'Rojo', 1, 2020),
+(2, 'Marca2', 'Specialized', 'Azul', 2, 2021),
+(3, 'Marca3', 'TopMega', 'Verde', 1, 2022);
+
+INSERT INTO clientes (Nombre, Apellido, telefono, DNI, Domicilio, codigo_bicicleta)
+VALUES
+('Enzo', 'Soliz', '2616668928', '39953981', 'Belgrano 123', 1),
+('Maria', 'Lopez', '987654321', '87654321', 'Centenario 912', 2);
+
+SELECT
+    clientes.nombre,
+    clientes.apellido,
+    bicicleta.marca,
+    bicicleta.modelo,
+    tipos_bicicletas.descripcion AS TipoBicicleta
+FROM
+    clientes
+LEFT JOIN
+    bicicleta ON clientes.codigo_bicicleta = bicicleta.codigo
+LEFT JOIN
+    tipos_bicicletas ON bicicleta.tipo_bicicleta = tipos_bicicletas.codigo;
